@@ -23,7 +23,7 @@ public class CompraTest {
 		Navegadores.finalizarTeste();
 	}
 	
-	@Test //Passou
+	@Test
 	public void compraSucesso() {
 		metodo.escrever(elemento.username, "standard_user");
 		metodo.escrever(elemento.password, "secret_sauce");
