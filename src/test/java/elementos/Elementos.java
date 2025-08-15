@@ -24,5 +24,13 @@ public class Elementos {
 	public By carrinho = By.xpath("//div[@id='shopping_cart_container']");
 	
 	// Elementos Compra
+	public By botaoCheckout = By.xpath("//a[@class='btn_action checkout_button']");
+	public By firstName = By.xpath("//input[@id='first-name']");
+	public By lastName = By.xpath("//input[@id='last-name']");
+	public By postalCode = By.xpath("//input[@id='postal-code']");
+	public By botaoContinue = By.xpath("//input[@value='CONTINUE']");
+	public By ValidarValorTotalItemBackpack = By.xpath("//div[@id='checkout_summary_container']//div[text()='32.39']");
+	public By botaoFinish = By.xpath("//div//a[@class='btn_action cart_button']");
+	public By validarCompra = By.xpath("//div[@id]//h2[text()='THANK YOU FOR YOUR ORDER']");
 
 }

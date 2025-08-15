@@ -36,7 +36,7 @@ public class LogoutTest {
 	}
 	
 	@Test
-	public void logoutComProdutoAdicionadoCarrinho() throws InterruptedException {
+	public void logoutComUmItemAdicionadoCarrinho() throws InterruptedException {
 		metodo.escrever(elemento.username, "standard_user");
 		metodo.escrever(elemento.password, "secret_sauce");
 		metodo.clicar(elemento.botaoLogin);
@@ -50,7 +50,7 @@ public class LogoutTest {
 	}
 	
 	@Test
-	public void logoutComVariosProdutosAdicionadosCarrinho() throws InterruptedException {
+	public void logoutComVariosItensAdicionadosCarrinho() throws InterruptedException {
 		metodo.escrever(elemento.username, "standard_user");
 		metodo.escrever(elemento.password, "secret_sauce");
 		metodo.clicar(elemento.botaoLogin);
