@@ -39,5 +39,24 @@ public class CompraTest {
 		metodo.validarTexto(elemento.ValidarValorTotalItemBackpack, totalItem);
 		metodo.clicar(elemento.botaoFinish);
 	}
+	
+	@Test
+	public void compraVariosItens() {
+		metodo.escrever(elemento.username, "standard_user");
+		metodo.escrever(elemento.password, "secret_sauce");
+		metodo.clicar(elemento.botaoLogin);
+		metodo.clicar(elemento.addToCartBackpack);
+		metodo.clicar(elemento.addToCartBikelight);
+		metodo.clicar(elemento.addToCartBoltTshirt);
+		metodo.clicar(elemento.carrinho);
+		metodo.clicar(elemento.botaoCheckout);
+		metodo.escrever(elemento.firstName, "teste");
+		metodo.escrever(elemento.lastName, "teste");
+		metodo.escrever(elemento.postalCode, "12345678");
+		metodo.clicar(elemento.botaoContinue);
+		String totalVariosItens = "Total: $60.45";
+		metodo.validarTexto(elemento.ValidarValorTotalVariosItens, totalVariosItens);
+		metodo.clicar(elemento.botaoFinish);
+	}
 
 }

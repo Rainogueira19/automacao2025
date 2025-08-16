@@ -23,7 +23,7 @@ public class CarrinhoTest {
 		Navegadores.finalizarTeste();
 	}
 	
-	//@Test
+	@Test
 	public void validarItemAdicionadoCarrinho() {
 		metodo.escrever(elemento.username, "standard_user");
 		metodo.escrever(elemento.password, "secret_sauce");
@@ -41,7 +41,7 @@ public class CarrinhoTest {
 
 }
 	
-	//@Test
+	@Test
 	public void validarvariosItensAdicionadosCarrinho() {
 		metodo.escrever(elemento.username, "standard_user");
 		metodo.escrever(elemento.password, "secret_sauce");
@@ -61,7 +61,7 @@ public class CarrinhoTest {
 
 }                     
 	
-	//@Test
+	@Test
 	public void continuarComprando() {
 		metodo.escrever(elemento.username, "standard_user");
 		metodo.escrever(elemento.password, "secret_sauce");
@@ -82,7 +82,7 @@ public class CarrinhoTest {
 
 }
 	
-	//@Test
+	@Test
 	public void removerItemAdicionadoCarrinho() {
 		metodo.escrever(elemento.username, "standard_user");
 		metodo.escrever(elemento.password, "secret_sauce");

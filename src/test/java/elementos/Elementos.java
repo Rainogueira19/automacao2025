@@ -39,6 +39,7 @@ public class Elementos {
 	public By ValidarValorTotalItemBackpack = By.xpath("//div[@id='checkout_summary_container']//div[text()='32.39']");
 	public By botaoFinish = By.xpath("//div//a[@class='btn_action cart_button']");
 	public By validarValorTotalContinuarComprando = By.xpath("//div[@id='checkout_summary_container']//div[text()='43.18']");
+	public By ValidarValorTotalVariosItens = By.xpath("//div[@id='checkout_summary_container']//div[text()='60.45']");
 	
 	
 	
