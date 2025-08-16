@@ -22,6 +22,13 @@ public class Elementos {
 	
 	// Elementos Carrinho
 	public By carrinho = By.xpath("//div[@id='shopping_cart_container']");
+	public By validarCompra = By.xpath("//div[@id]//h2[text()='THANK YOU FOR YOUR ORDER']");
+	public By validarValorTotalBackpackBikelightBoltTShirt = By.xpath("//div[@id='checkout_summary_container']//div[text()='60.45']");
+	public By botaoContinueShopping = By.xpath("//a[@class='btn_secondary']"); 
+	public By botaoRemove = By.xpath("//button[text()='REMOVE']");
+	public By validar1Carrinho = By.xpath("//span[text()='1']");
+	public By validar3Carrinho = By.xpath("//span[text()='3']");
+	
 	
 	// Elementos Compra
 	public By botaoCheckout = By.xpath("//a[@class='btn_action checkout_button']");
@@ -31,6 +38,10 @@ public class Elementos {
 	public By botaoContinue = By.xpath("//input[@value='CONTINUE']");
 	public By ValidarValorTotalItemBackpack = By.xpath("//div[@id='checkout_summary_container']//div[text()='32.39']");
 	public By botaoFinish = By.xpath("//div//a[@class='btn_action cart_button']");
-	public By validarCompra = By.xpath("//div[@id]//h2[text()='THANK YOU FOR YOUR ORDER']");
+	public By validarValorTotalContinuarComprando = By.xpath("//div[@id='checkout_summary_container']//div[text()='43.18']");
+	
+	
+	
+	
 
 }
