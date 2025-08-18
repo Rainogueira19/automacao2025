@@ -24,13 +24,15 @@ public class CompraTest {
 	}
 	
 	@Test
-	public void compraSucesso() {
+	public void compraSucesso() throws InterruptedException {
 		metodo.escrever(elemento.username, "standard_user");
 		metodo.escrever(elemento.password, "secret_sauce");
 		metodo.clicar(elemento.botaoLogin);
 		metodo.clicar(elemento.addToCartBackpack);
 		metodo.clicar(elemento.carrinho);
+		Thread.sleep(1000);
 		metodo.clicar(elemento.botaoCheckout);
+		Thread.sleep(1000);
 		metodo.escrever(elemento.firstName, "teste");
 		metodo.escrever(elemento.lastName, "teste");
 		metodo.escrever(elemento.postalCode, "12345678");
@@ -41,7 +43,7 @@ public class CompraTest {
 	}
 	
 	@Test
-	public void compraVariosItens() {
+	public void comprarAdicionandoVariosItens() throws InterruptedException {
 		metodo.escrever(elemento.username, "standard_user");
 		metodo.escrever(elemento.password, "secret_sauce");
 		metodo.clicar(elemento.botaoLogin);
@@ -49,7 +51,9 @@ public class CompraTest {
 		metodo.clicar(elemento.addToCartBikelight);
 		metodo.clicar(elemento.addToCartBoltTshirt);
 		metodo.clicar(elemento.carrinho);
+		Thread.sleep(1000);
 		metodo.clicar(elemento.botaoCheckout);
+		Thread.sleep(1000);
 		metodo.escrever(elemento.firstName, "teste");
 		metodo.escrever(elemento.lastName, "teste");
 		metodo.escrever(elemento.postalCode, "12345678");
@@ -57,6 +61,46 @@ public class CompraTest {
 		String totalVariosItens = "Total: $60.45";
 		metodo.validarTexto(elemento.ValidarValorTotalVariosItens, totalVariosItens);
 		metodo.clicar(elemento.botaoFinish);
+	}
+	
+	@Test
+	public void cancelarCompra() throws InterruptedException {
+		metodo.escrever(elemento.username, "standard_user");
+		metodo.escrever(elemento.password, "secret_sauce");
+		metodo.clicar(elemento.botaoLogin);
+		metodo.clicar(elemento.addToCartBackpack);
+		metodo.clicar(elemento.carrinho);
+		Thread.sleep(1000);
+		metodo.clicar(elemento.botaoCheckout);
+		Thread.sleep(1000);
+		metodo.escrever(elemento.firstName, "teste");
+		metodo.escrever(elemento.lastName, "teste");
+		metodo.escrever(elemento.postalCode, "12345678");
+	    metodo.clicar(elemento.botaoContinue);
+		metodo.clicar(elemento.botaoCancel);
+		metodo.validarUrl("https://www.saucedemo.com/v1/inventory.html");
+		
+	}
+	
+	@Test
+	public void cancelarCompraTodosOsItens() throws InterruptedException {
+		metodo.escrever(elemento.username, "standard_user");
+		metodo.escrever(elemento.password, "secret_sauce");
+		metodo.clicar(elemento.botaoLogin);
+		metodo.clicar(elemento.addToCartBackpack);
+		metodo.clicar(elemento.addToCartBikelight);
+		metodo.clicar(elemento.addToCartBoltTshirt);
+		metodo.clicar(elemento.carrinho);
+		Thread.sleep(1000);
+		metodo.clicar(elemento.botaoCheckout);
+		Thread.sleep(1000);
+		metodo.escrever(elemento.firstName, "teste");
+		metodo.escrever(elemento.lastName, "teste");
+		metodo.escrever(elemento.postalCode, "12345678");
+	    metodo.clicar(elemento.botaoContinue);
+		metodo.clicar(elemento.botaoCancel);
+		metodo.validarUrl("https://www.saucedemo.com/v1/inventory.html");
+		
 	}
 
 }
